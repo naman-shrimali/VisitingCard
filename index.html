@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid row">
+    <div class="container col-md-6">
+        <h3 class="text-center">Enter Your Details: </h3>
+        <form id="myForm" >
+            <br><br>
+            <div class="row">
+                <div class="col">
+                  <input type="text" id="infName" class="form-control" placeholder="First name" value="Naman" maxlength="9" required>
+                </div>
+                <div class="col">
+                  <input type="text" id="inlName" class="form-control" placeholder="Last name" value="Shrimali" maxlength="8" required>
+                </div>
+              </div>
+            <hr>
+            <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email" value="shrimalinaman@gmail.com" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="phone">Contact Number:</label>
+                <input type="tel" class="form-control" placeholder="Contact Number" id="phone" name="phone" pattern="^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$" value="+919829817629" required>
+              </div>
+            </div>
+              <label for="img">Profile</label>
+              <input type="file" class="form-control" id="img" accept=".jpg, .png, .jpeg, .svg" onchange="loadImage(event)" required>
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" value="Ready Bytes" required>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" value="Bhilwara" required>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <input type="text" id="inputState" class="form-control" value="Rajasthan" required>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip" value="311001" required>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit" id="preview" onclick="prev()">Preview</button>
+    </form>
+</div>
+
+<div class="container col-md-4 row align-items-center" id="gun">
+    <canvas id="result" class="card w-100 h-50">
+        <div id="content">
+          <img src="" alt="image" id="prev-image">
+          <ul>
+            <li id="fname"></li> 
+            <li id="lname"></li>
+            <li id="email"></li>
+            <li id="num"></li>
+            <li id="addr"></li>
+            <li id="city"></li>
+            <li id="state"></li>
+            <li id="zip"></li>
+          </ul>
+        </div>
+    </canvas>
+    <div class="menu">
+    <button class="btn btn-dark" id="down">Download</button>
+    <button class="btn btn-warning" id="clear">Clear</button>
+    </div>
+</div>
+</div>
+<script src="index.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
