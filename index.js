@@ -1,7 +1,7 @@
 function prev(){
   //console.log("hyy");
   var canvas = document.getElementById("result");
-  canvas = createHiPPICanvas(canvas.width,canvas.height);
+  canvas = createHiPPICanvas(300,170);
   //var canvas = document.getElementById("result");
   var ctx = canvas.getContext("2d");
 
